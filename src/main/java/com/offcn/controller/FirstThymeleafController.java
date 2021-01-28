@@ -78,4 +78,9 @@ public class FirstThymeleafController {
         return "index07";
     }
 
+    @RequestMapping("/index08")
+    public String index08(){
+        return null;
+    }
+
 }
