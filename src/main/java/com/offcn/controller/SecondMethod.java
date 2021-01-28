@@ -8,6 +8,6 @@ package com.offcn.controller;
 public class SecondMethod {
 
     public static void main(String[] args) {
-
+        System.out.println("11111");
     }
 }
