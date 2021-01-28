@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index02</title>
+</head>
+<body>
+<table>
+    <th>id</th>
+    <th>姓名</th>
+    <th>年龄</th>
+    <th>索引</th>
+    <th>计数</th>
+    <th>元素个数</th>
+    <th>当前迭代变量</th>
+    <th>是否奇数</th>
+    <th>是否偶数</th>
+    <th>是否第一个</th>
+    <th>是否最后一个</th>
+    <tr th:each="user,iterStat : ${list}">
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.name}"></td>
+        <td th:text="${user.age}"></td>
+        <td th:text="${iterStat.index}"></td>   <!--索引0开始-->
+        <td th:text="${iterStat.count}"></td>   <!--计数1开始-->
+        <td th:text="${iterStat.size}"></td>    <!--集合元素个数-->
+        <td th:text="${iterStat.current}"></td>    <!--当前迭代变量-->
+        <td th:text="${iterStat.even}"></td>    <!--当前循环是否是奇数-->
+        <td th:text="${iterStat.odd}"></td>    <!--当前循环是否是偶数-->
+        <td th:text="${iterStat.first}"></td>    <!--当前元素是否是第一个-->
+        <td th:text="${iterStat.last}"></td>    <!--当前元素是否是最后一个-->
+    </tr>
+</table>
+</body>
+</html>

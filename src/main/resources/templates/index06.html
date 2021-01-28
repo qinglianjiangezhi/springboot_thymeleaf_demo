@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index02</title>
+<!--    <link rel="stylesheet" type="text/css" href="../static/css/pages-cart.css" th:href="@{/css/pages-cart.css}"/>-->
+    <link rel="stylesheet" type="text/css"  th:href="@{/css/pages-cart.css}"/>
+</head>
+<body>
+<h1 th:text="${message}"></h1>
+<img th:src="@{/111.jpg}"><br><br>
+<div th:insert="~{footer::copy}"></div>
+<div th:replace="~{footer::copy}"></div>
+<div th:include="~{footer::copy}"></div>
+</body>
+</html>

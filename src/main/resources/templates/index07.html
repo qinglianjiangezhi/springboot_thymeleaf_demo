@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index02</title>
+</head>
+<body>
+日期格式化:<span th:text="${#dates.format(date,'yyyy-MM-dd hh:mm:ss')}"></span><br>
+数字格式化:<span th:text="${#numbers.formatDecimal(number,8,2)}"></span><br>
+字符串格式化:<br>
+超过60个字符的内容以......展示<span th:text="${#strings.abbreviate(str,60)}"></span><br>
+截取字符串<span th:text="${#strings.substring(str,0,40)}"></span><br>
+<span th:if="${#strings.isEmpty(str)}">是一个空串</span><br>
+<span th:unless="${#strings.isEmpty(str)}">不是一个空串</span>
+</body>
+</html>

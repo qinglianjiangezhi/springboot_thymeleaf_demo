@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index02</title>
+</head>
+<body>
+<input type="text" th:value="${message}"><br>
+<em th:size="${message}"></em>
+
+<!--字符串拼接-->
+<!--方案一:-->
+<h1 th:text="'小明,'+${message}"></h1><br>
+<!--方案二:-->
+<h1 th:text="|小光,${message}|"></h1>
+</body>
+</html>

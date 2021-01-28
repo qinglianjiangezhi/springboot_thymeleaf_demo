@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index02</title>
+</head>
+<body>
+<!--类似if选择结构-->
+<span th:if="${flag}=='yes'">中公教育</span><br>
+<span th:unless="${flag}=='yes'">优就业</span><br>
+<!--类似switch case结构-->
+<div th:switch="${menu}">
+    <span th:case="admin">admin</span>
+    <span th:case="${manager}">manager</span>
+</div>
+</body>
+</html>
